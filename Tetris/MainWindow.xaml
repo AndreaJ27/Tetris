@@ -5,8 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tetris"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="1182.934" Width="914" Background="#FF4E5A91">
+    <Grid Margin="1,1,0,6" RenderTransformOrigin="0.5,0.5" Background="#FF4E5A91">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="1134*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="395*"/>
+            <ColumnDefinition Width="396*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.032"/>
+                <TranslateTransform X="0.471777" Y="0.006619"/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Grid HorizontalAlignment="Left" Height="1025" Margin="43,64,0,0" VerticalAlignment="Top" Width="468" Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF271B1B" Offset="0"/>
+                    <GradientStop Color="#FF6C4343" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+        </Grid>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="92" Margin="122,64,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Score" VerticalAlignment="Top" Width="267" FontSize="48" FontFamily="DJB Almost Perfect" Foreground="#FFE8E5E5" HorizontalContentAlignment="Center" BorderBrush="{x:Null}">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF6C4343" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="80" Margin="122,153,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="267" TextChanged="TextBox_TextChanged" FontSize="48" Foreground="#FFE8E5E5" BorderBrush="{x:Null}" FontFamily="DJB Almost Perfect">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6C4343" Offset="0"/>
+                    <GradientStop Color="#FF271B1B" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Button Content="Start Game" Grid.Column="1" HorizontalAlignment="Left" Margin="167,1036,0,0" Grid.Row="1" VerticalAlignment="Top" Width="196" Height="53" Background="#FF6C6161" BorderBrush="#FFC9AFAF" Foreground="Gainsboro" FontFamily="DJB Almost Perfect" FontSize="24"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="122,735,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="158" Width="276" FontSize="65" FontFamily="Go Boom!" Foreground="#FF8F0909" TextAlignment="Center" FontWeight="Bold"><Run Text="Game "/><LineBreak/><Run Text="O"/><Run Text="ver"/></TextBlock>
     </Grid>
 </Window>
